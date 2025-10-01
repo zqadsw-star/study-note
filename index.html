@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>自己紹介ページ</title>
-<style>
-  body {
-    background-color: MediumSeaGreen; /* 背景色 */
-    font-family: Arial, sans-serif; /* フォント */
-  }
+  <style>
+    body {
+      background-color: MediumSeaGreen; /* 背景色 */
+      font-family: Arial, sans-serif; /* フォント */
+    }
     h1 {
       color: darkblue; /* 文字色 */
       text-align: center; /* 中央寄せ */
@@ -21,35 +21,44 @@
       font-size: 36px; /* サイズ */
       background-color: yellow; /* 見出しの背景 */  
       display: inline-block; /* 文字の幅の分だけ背景色が変わる */
-      padding: 5pX; /* 余白 */
+      padding: 5px; /* 余白 */
     }
     .title {
       text-align: center; /* 中の要素を中央寄せ */
     }
     p {
-      font-size: 16px; /* 文字サイズ */
-      line-height: 1.5; /* 行間 */
       font-size: 20px; /* サイズ */
+      line-height: 1.5; /* 行間 */
     }
-   .hobby-list {
-      list-style: none;
-      padding: 0;
-      font-size: 20px;
-      color: #333;
-    }
-    .hobby-list li {
-      margin: 15px 0;
-      padding: 10px;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      background-color: #f9f9f9;
-      text-align: center;
-    }
-    .hobby-list img {
+.hobby-list {
+    list-style: none;
+    padding: 0;
+    display: flex;          
+    justify-content: center;
+    flex-wrap: wrap;        
+    gap: 20px;              
+}
+
+.hobby-list li {
+    width: 150px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* カードにホバーしたときだけ変化する */
+.hobby-list li:hover {
+    background-color: #e0ffe0; /* 薄い緑 */
+    border-color: green;       /* 緑の枠線 */
+    transform: scale(1.05);    /* 少し大きく */
+}    .hobby-list img {
       display: block;
       margin: 10px auto 0;
     }
-　</style>
+  </style>
 </head>
 <body>
   <h1 id="top">こんにちは！kentyの自己紹介ページです</h1>
@@ -66,7 +75,7 @@
   <h2>趣味</h2>
 </div>
   <p>好きなこと5選</p>
-<ul>
+<ul class="hobby-list">
 <li>キャンプに行くこと <img src="camp.png" alt="キャンプの画像" width="70"></li>
 <li>コーヒーを飲むこと <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSz-bZVeah5lHgzSG8R1u1uINbh5La2EyzYdhamHx1y5Iaat59EAc-gNUURlpxZCemB8XIyP2LyrQB8E2LP_ucdIjhhuhRPo3ORONZfNZR6Mbb2DTz2eTIMvAujYQsoESad23zaJb85CN-/s800/drink_coffee.png" alt="コーヒーの画像" width="70"></li>
 <li>ゲームをすること</li>
@@ -82,6 +91,7 @@
   <a href="#top">一番上へ戻る</a></p>
 </body>
 </html>
+
 
 
 
